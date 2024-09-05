@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad: Sitio Web</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .navbar a, .navbar .dropdown-content a {
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .navbar a:hover, .dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar .dropdown {
+            position: relative;
+        }
+
+        .navbar .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            cursor: pointer;
+            background-color: #333;
+        }
+
+        .navbar .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+
+        .navbar .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+        }
+
+        .navbar .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .navbar .icon {
+            display: none;
+        }
+
+        .document-form-title {
+            background-image: url(imagenes/f_1.jpg);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .macroproceso-container {
+            margin-bottom: 20px; /* Espaciado reducido entre secciones */
+            padding: 10px; /* Espaciado interno para mejorar presentación */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Agregar sombra a los divs */
+            background-color: #ffffff34; /* Fondo blanco para los divs */
+            border-radius: 8px; /* Bordes redondeados para los divs */
+        }
+
+        .macroproceso-table {
+            width: 100%; /* Ajusta el ancho de la tabla si es necesario */
+            border-collapse: collapse; /* Asegura que no haya espacios entre las celdas */
+        }
+
+        .macroproceso-label {
+            text-align: center; /* Centra el texto horizontalmente */
+            vertical-align: middle; /* Centra el texto verticalmente */
+            padding: 10px; /* Espaciado interno */
+        }
+
+        hr {
+            background-color: gray;
+            height: 1px;
+            border: none;
+            margin: 30px 0; /* Espaciado superior e inferior */
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            margin-top: 20px; /* Separación superior para el pie de página */
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar a, .navbar .dropdown {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            
+            .navbar .dropdown-content {
+                position: relative;
+            }
+
+            .navbar .icon {
+                display: block;
+                float: right;
+                font-size: 24px;
+                padding: 14px 20px;
+                cursor: pointer;
+                background-color: #333;
+                color: white;
+                border: none;
+            }
+
+            .navbar.responsive .dropdown-content {
+                display: block;
+            }
+
+            .navbar.responsive .dropdown {
+                float: none;
+            }
+
+            .navbar.responsive .icon {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            var x = document.getElementById("navbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <div class="navbar" id="navbar">
+        <a href="#home">Inicio</a>
+        <a href="#about">Sobre Nosotros</a>
+        <a href="#services">Servicios</a>
+        <a href="#contact">Contacto</a>
+        <div class="dropdown">
+            <button class="dropbtn">Más
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#team">Equipo</a>
+                <a href="#careers">Carreras</a>
+                <a href="#blog">Blog</a>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            &#9776;
+        </a>
+    </div>
+
+    <div class="document-form-title">
+        ACTIVIDAD: SITIO WEB
+    </div>
+
+    <div class="content">
+        <div class="macroproceso-container" data-validate="datos requeridos">
+            <table class="macroproceso-table">
+                <tr>
+                    <td class="macroproceso-label">
+                        <span>¿Qué es una Arquitectura?</span>
+                    </td>           
+                </tr>
+            </table>   
+        </div>
+
+        <div class="macroproceso-container" data-validate="datos requeridos">
+            <table class="macroproceso-table">
+                <tr>
+                    <td class="macroproceso-label">
+                        <span>Arquitectura es el diseño estructural y organizativo de un sistema o entidad, que define cómo sus componentes se disponen e interactúan para cumplir con ciertos objetivos y requisitos.</span>
+                    </td>           
+                </tr>
+            </table>   
+        </div>
+
+        <div class="macroproceso-container" data-validate="datos requeridos">
+            <table class="macroproceso-table">
+                <tr>
+                    <td class="macroproceso-label">
+                        <span>¿Qué es una Arquitectura de Software?</span>
+                    </td>           
+                </tr>
+            </table>   
+        </div>
+
+        <div class="macroproceso-container" data-validate="datos requeridos">
+            <table class="macroproceso-table">
+                <tr>
+                    <td class="macroproceso-label">
+                        <span>La arquitectura de software es el diseño estructural de un sistema de software que define sus componentes, sus interacciones y cómo estos cumplen con los requisitos funcionales y no funcionales. Proporciona un marco para la construcción y evolución del sistema, asegurando eficiencia, escalabilidad y mantenibilidad.</span>
+                    </td>           
+                </tr>
+            </table>   
+        </div>
+
+        <div class="macroproceso-container" data-validate="datos requeridos">
+            <table class="macroproceso-table">
+                <tr>
+                    <td class="macroproceso-label">
+                        <span>Bibliografías</span>
+                    </td>           
+                </tr>
+            </table>   
+        </div>
+
+        <div class="macroproceso-container" data-validate="datos requeridos">
+            <table class="macroproceso-table">
+                <tr>
+                    <td class="macroproceso-label">
+                        <span>Ching, F. D. K. (2015). Form, Space, and Order. Wiley.</span><br>
+                        <span>Bass, L., Clements, P., & Kazman, R. (2012). Software Architecture in Practice (3rd ed.). Addison-Wesley.</span>
+                    </td>           
+                </tr>
+            </table>   
+        </div>
+
+        <hr/>
+
+    </div>
+
+    <!-- Pie de página -->
+    <div class="footer">
+        © 2024 Dovinex. Todos los derechos reservados.
+    </div>
+
+</body>
+</html>
+
